@@ -1,0 +1,247 @@
+{
+    "heroes_marvel": [
+      {
+        "nombre": "Spider-Man",
+        "descripcion": "Peter Parker adquiere habilidades arácnidas después de ser mordido por una araña radiactiva.",
+        "fecha_lanzamiento": "1962-08-01",
+        "foto": "https://example.com/spiderman.jpg"
+      },
+      {
+        "nombre": "Iron Man",
+        "descripcion": "Tony Stark, un genio multimillonario, crea un traje blindado para luchar contra el crimen.",
+        "fecha_lanzamiento": "1963-03-01",
+        "foto": "https://example.com/ironman.jpg"
+      },
+      {
+        "nombre": "Thor",
+        "descripcion": "Thor es el poderoso dios del trueno, basado en la mitología nórdica.",
+        "fecha_lanzamiento": "1962-08-01",
+        "foto": "https://example.com/thor.jpg"
+      },
+      {
+        "nombre": "Captain America",
+        "descripcion": "Steve Rogers se convierte en el símbolo de la libertad y la justicia durante la Segunda Guerra Mundial.",
+        "fecha_lanzamiento": "1941-03-01",
+        "foto": "https://example.com/captainamerica.jpg"
+      },
+      {
+        "nombre": "Hulk",
+        "descripcion": "Bruce Banner se transforma en un monstruo verde de fuerza incontrolable debido a la radiación gamma.",
+        "fecha_lanzamiento": "1962-05-01",
+        "foto": "https://example.com/hulk.jpg"
+      },
+      {
+        "nombre": "Black Widow",
+        "descripcion": "Natasha Romanoff es una espía y asesina entrenada, conocida por su destreza en combate.",
+        "fecha_lanzamiento": "1964-04-01",
+        "foto": "https://example.com/blackwidow.jpg"
+      },
+      {
+        "nombre": "Black Panther",
+        "descripcion": "T'Challa es el rey de Wakanda y posee habilidades sobrehumanas gracias a la hierba del corazón.",
+        "fecha_lanzamiento": "1966-07-01",
+        "foto": "https://example.com/blackpanther.jpg"
+      },
+      {
+        "nombre": "Doctor Strange",
+        "descripcion": "Stephen Strange se convierte en el Hechicero Supremo después de un accidente que lo deja con manos temblorosas.",
+        "fecha_lanzamiento": "1963-07-01",
+        "foto": "https://example.com/doctorstrange.jpg"
+      },
+      {
+        "nombre": "Wolverine",
+        "descripcion": "Logan es un mutante con garras retráctiles y poderes de regeneración.",
+        "fecha_lanzamiento": "1974-10-01",
+        "foto": "https://example.com/wolverine.jpg"
+      },
+      {
+        "nombre": "Captain Marvel",
+        "descripcion": "Carol Danvers adquiere poderes cósmicos después de un accidente con tecnología kree.",
+        "fecha_lanzamiento": "1968-03-01",
+        "foto": "https://example.com/captainmarvel.jpg"
+      },
+      {
+        "nombre": "Ant-Man",
+        "descripcion": "Scott Lang y Hank Pym tienen la capacidad de encogerse hasta el tamaño de una hormiga y aumentar su fuerza.",
+        "fecha_lanzamiento": "1962-09-01",
+        "foto": "https://example.com/antman.jpg"
+      },
+      {
+        "nombre": "The Wasp",
+        "descripcion": "Janet van Dyne es una superheroína con la capacidad de volar y disparar rayos de energía.",
+        "fecha_lanzamiento": "1963-06-01",
+        "foto": "https://example.com/thewasp.jpg"
+      },
+      {
+        "nombre": "Hawkeye",
+        "descripcion": "Clint Barton es un experto arquero y luchador mano a mano, conocido por su puntería.",
+        "fecha_lanzamiento": "1964-09-01",
+        "foto": "https://example.com/hawkeye.jpg"
+      },
+      {
+        "nombre": "Scarlet Witch",
+        "descripcion": "Wanda Maximoff tiene habilidades de manipulación de la realidad y telequinesis.",
+        "fecha_lanzamiento": "1964-03-01",
+        "foto": "https://example.com/scarletwitch.jpg"
+      },
+      {
+        "nombre": "Vision",
+        "descripcion": "Visión es un sintezoide con fuerza sobrehumana y la capacidad de volar.",
+        "fecha_lanzamiento": "1968-11-01",
+        "foto": "https://example.com/vision.jpg"
+      },
+      {
+        "nombre": "Doctor Doom",
+        "descripcion": "Victor von Doom es un genio científico y gobernante de Latveria, con una armadura poderosa.",
+        "fecha_lanzamiento": "1962-07-01",
+        "foto": "https://example.com/doctordoom.jpg"
+      },
+      {
+        "nombre": "Deadpool",
+        "descripcion": "Wade Wilson es un mercenario con un factor de curación acelerado, conocido por su humor negro.",
+        "fecha_lanzamiento": "1991-02-01",
+        "foto": "https://example.com/deadpool.jpg"
+      },
+      {
+        "nombre": "Magneto",
+        "descripcion": "Erik Lehnsherr puede controlar el magnetismo y lidera la Hermandad de Mutantes.",
+        "fecha_lanzamiento": "1963-09-01",
+        "foto": "https://example.com/magneto.jpg"
+      },
+      {
+        "nombre": "Groot",
+        "descripcion": "Groot es un extraterrestre en forma de árbol con la capacidad de regeneración y fuerza sobrehumana.",
+        "fecha_lanzamiento": "1960-11-01",
+        "foto": "https://example.com/groot.jpg"
+      },
+      {
+        "nombre": "Star-Lord",
+        "descripcion": "Peter Quill es un aventurero interestelar y líder de los Guardianes de la Galaxia.",
+        "fecha_lanzamiento": "1976-01-01",
+        "foto": "https://example.com/starlord.jpg"
+      }
+    ]
+    ,
+    "heroes_dc": [
+      {
+        "nombre": "Batman",
+        "descripcion": "Bruce Wayne se convierte en el Caballero de la Noche después de presenciar el asesinato de sus padres.",
+        "fecha_lanzamiento": "1939-05-01",
+        "foto": "https://example.com/batman.jpg"
+      },
+      {
+        "nombre": "Superman",
+        "descripcion": "Kal-El es un extraterrestre con habilidades sobrehumanas que se convierte en el defensor de Metrópolis.",
+        "fecha_lanzamiento": "1938-06-01",
+        "foto": "https://example.com/superman.jpg"
+      },
+      {
+        "nombre": "Wonder Woman",
+        "descripcion": "Diana Prince es una princesa amazona que lucha por la justicia y la paz en el mundo.",
+        "fecha_lanzamiento": "1941-10-01",
+        "foto": "https://example.com/wonderwoman.jpg"
+      },
+      {
+        "nombre": "The Flash",
+        "descripcion": "Barry Allen obtiene velocidad sobrehumana después de ser alcanzado por un rayo y bañado en productos químicos.",
+        "fecha_lanzamiento": "1956-10-01",
+        "foto": "https://example.com/theflash.jpg"
+      },
+      {
+        "nombre": "Green Lantern",
+        "descripcion": "Hal Jordan es reclutado por los Green Lantern Corps y obtiene un anillo que le otorga poderes.",
+        "fecha_lanzamiento": "1959-07-01",
+        "foto": "https://example.com/greenlantern.jpg"
+      },
+      {
+        "nombre": "Aquaman",
+        "descripcion": "Arthur Curry es el rey de la Atlántida y tiene la capacidad de comunicarse y controlar criaturas marinas.",
+        "fecha_lanzamiento": "1941-11-01",
+        "foto": "https://example.com/aquaman.jpg"
+      },
+      {
+        "nombre": "Cyborg",
+        "descripcion": "Victor Stone es un atleta estrella que es reconstruido con partes cibernéticas después de un accidente.",
+        "fecha_lanzamiento": "1980-07-01",
+        "foto": "https://example.com/cyborg.jpg"
+      },
+      {
+        "nombre": "Green Arrow",
+        "descripcion": "Oliver Queen es un arquero experto y luchador por la justicia, inspirado por Robin Hood.",
+        "fecha_lanzamiento": "1941-11-01",
+        "foto": "https://example.com/greenarrow.jpg"
+      },
+      {
+        "nombre": "Shazam",
+        "descripcion": "Billy Batson se transforma en un héroe con poderes mágicos cuando pronuncia la palabra 'Shazam'.",
+        "fecha_lanzamiento": "1940-02-01",
+        "foto": "https://example.com/shazam.jpg"
+      },
+      {
+        "nombre": "Martian Manhunter",
+        "descripcion": "J'onn J'onzz es el último sobreviviente marciano con habilidades de cambio de forma y telepatía.",
+        "fecha_lanzamiento": "1955-11-01",
+        "foto": "https://example.com/martianmanhunter.jpg"
+      },
+      {
+        "nombre": "Hawkman",
+        "descripcion": "Carter Hall es un arqueólogo que descubre ser la reencarnación de un príncipe alado del antiguo Egipto.",
+        "fecha_lanzamiento": "1940-04-01",
+        "foto": "https://example.com/hawkman.jpg"
+      },
+      {
+        "nombre": "Hawkgirl",
+        "descripcion": "Shiera Sanders es la reencarnación de una princesa alada del antiguo Egipto, y compañera de Hawkman.",
+        "fecha_lanzamiento": "1940-11-01",
+        "foto": "https://example.com/hawkgirl.jpg"
+      },
+      {
+        "nombre": "Zatanna",
+        "descripcion": "Zatanna es una maga poderosa que realiza hechizos al pronunciar las palabras al revés.",
+        "fecha_lanzamiento": "1964-11-01",
+        "foto": "https://example.com/zatanna.jpg"
+      },
+      {
+        "nombre": "Nightwing",
+        "descripcion": "Dick Grayson es el primer Robin que se convierte en el héroe Nightwing después de dejar de ser el compañero de Batman.",
+        "fecha_lanzamiento": "1963-07-01",
+        "foto": "https://example.com/nightwing.jpg"
+      },
+      {
+        "nombre": "Red Hood",
+        "descripcion": "Jason Todd, el segundo Robin, se convierte en Red Hood después de ser resucitado y adoptar un enfoque más violento.",
+        "fecha_lanzamiento": "1983-03-01",
+        "foto": "https://example.com/redhood.jpg"
+      },
+      {
+        "nombre": "Batgirl",
+        "descripcion": "Barbara Gordon es la hija del comisionado de policía de Gotham City, quien se convierte en la heroína Batgirl.",
+        "fecha_lanzamiento": "1961-11-01",
+        "foto": "https://example.com/batgirl.jpg"
+      },
+      {
+        "nombre": "Supergirl",
+        "descripcion": "Kara Zor-El es la prima de Superman que escapa del planeta Krypton y llega a la Tierra.",
+        "fecha_lanzamiento": "1959-05-01",
+        "foto": "https://example.com/supergirl.jpg"
+      },
+      {
+        "nombre": "Robin",
+        "descripcion": "Dick Grayson es el joven compañero de Batman y eventualmente se convierte en Nightwing.",
+        "fecha_lanzamiento": "1940-04-01",
+        "foto": "https://example.com/robin.jpg"
+      },
+      {
+        "nombre": "Wonder Girl",
+        "descripcion": "Donna Troy es una amazona y compañera de Wonder Woman, con habilidades similares.",
+        "fecha_lanzamiento": "1965-03-01",
+        "foto": "https://example.com/wondergirl.jpg"
+      },
+      {
+        "nombre": "Black Canary",
+        "descripcion": "Dinah Lance es una experta en artes marciales y posee un grito sónico devastador.",
+        "fecha_lanzamiento": "1947-11-01",
+        "foto": "https://example.com/blackcanary.jpg"
+      }
+    ]
+  }
