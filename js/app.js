@@ -23,15 +23,13 @@ async function getData() {
   try {
     dataHeroes = await getData();
     for (const keyUniverso in dataHeroes) {
-      let tempDiv = document.createElement('div')
-      tempDiv.classList.add(`.${keyUniverso}`)
+      let tempContent = document.createElement('div')
+      tempContent.classList.add(`${keyUniverso}`)
       let logo = document.createElement('div')
       let img = document.createElement('img')
       img.src = `source/${keyUniverso}`
       logo.appendChild(img)
-      tempDiv.appendChild(logo)
-
-
+      tempContent.appendChild(logo)
       for (const heroe of dataHeroes[keyUniverso]) {
         // arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha, heroe.foto))
         let baseCard = `<div class="card">
@@ -43,7 +41,12 @@ async function getData() {
             <button>Ver</button>
           </div>
         </div>`
+        let tempDivCard = document.createElement('div')
+        tempDivCard.innerHTML = baseCard
+        let nodoCard = tempDivCard.firstChild
+        tempContent.appendChild(nodoCard)
       }
+      mainC.appendChild(tempContent)
     }
   } catch (error) {
     console.error('Error en la obtención de datos:', error);
