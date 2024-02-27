@@ -3,13 +3,13 @@ let bodyM = document.querySelector('body')
 let dataHeroes;
 const arrayHeroes = []
 class ObjectHeroe {
-  constructor(nombre, descripcion, fecha, foto, cardHtml) {
+  constructor(nombre, descripcion, fecha, foto, cardHtml, universo) {
     this.nombre = nombre
     this.descripcion = descripcion
     this.fecha = fecha
     this.foto = foto
     this.cardHtml = cardHtml
-
+    this.universo = universo
     this.mostrarInfo = this.mostrarInfo.bind(this);
 
     this.cardHtml.querySelector(".botonVer").addEventListener('click', this.mostrarInfo);
@@ -20,12 +20,12 @@ class ObjectHeroe {
     document.getElementById('modalFecha').textContent = this.fecha
     document.getElementById('myModal').style.display = 'flex';
     document.querySelector(".imgModal").src = this.foto
-    document.querySelector('.close').classList.add('.marvel-button')
+    document.querySelector('.close').classList.add(`${this.universo}`)
   }
 }
 
 
-function crearCartas(array) {
+function crearCartas(array, universo) {
   let cajaCartas = document.createElement("div")
   cajaCartas.classList.add("cards")
   for (const heroe of array) {
@@ -35,7 +35,7 @@ function crearCartas(array) {
             <img src="${heroe.foto}" alt="heroe" />
           </div>
           <div class="info">
-            <h2>${heroe.nombre}</h2>
+            <h3>${heroe.nombre}</h3>
             <button class="botonVer">Ver</button>
           </div>
         </div>`
@@ -44,7 +44,7 @@ function crearCartas(array) {
 
     let nodo = tempDiv.firstElementChild
     cajaCartas.appendChild(nodo)
-    arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha_lanzamiento, heroe.foto, nodo))
+    arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha_lanzamiento, heroe.foto, nodo, universo))
 
   }
   return cajaCartas
@@ -64,13 +64,13 @@ async function getData() {
     for (const keyUniverso in dataHeroes) {
       let tempContent = document.createElement('main')
       tempContent.classList.add(`${keyUniverso}`)
-      let logo = document.createElement('div')
-      logo.classList.add("logo")
-      let img = document.createElement('img')
-      img.src = `source/${keyUniverso}.svg`
-      logo.appendChild(img)
-      tempContent.appendChild(logo)
-      let cajaCartas = crearCartas(dataHeroes[keyUniverso])
+      // let logo = document.createElement('div')
+      // logo.classList.add("logo")
+      // let img = document.createElement('img')
+      // img.src = `source/${keyUniverso}.svg`
+      // logo.appendChild(img)
+      // tempContent.appendChild(logo)
+      let cajaCartas = crearCartas(dataHeroes[keyUniverso], keyUniverso)
       tempContent.appendChild(cajaCartas)
       bodyM.appendChild(tempContent)
     }
