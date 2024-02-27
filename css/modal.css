@@ -9,22 +9,23 @@
   z-index: 100;
 }
 .imgModal {
-  width: 400px;
-  height: 500px;
+  width: 700px;
+  height: 600px;
 }
 .modal-content {
   display: flex;
   position: relative;
-  background-color: #fefefe;
   align-self: center;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
+  width: 40%;
   height: 60%;
   gap: 1rem;
 }
 
+.modal-content img {
+  border-radius: 1rem;
+}
 .close {
   color: #aaa;
   font-size: 28px;
@@ -38,11 +39,7 @@
   cursor: pointer;
 }
 
-button.Marvel_Logo {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #e62429;
+.textDescrip button {
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
@@ -50,15 +47,57 @@ button.Marvel_Logo {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+button.Marvel_Logo {
+  background-color: #e62429;
 }
 
+button.heroes_dc {
+  background-color: #4721d2;
+}
 .Marvel_Logo:hover {
   background-color: #c5111b;
 }
 
-#modalTitle {
-  font-size: 3rem;
+.textDescrip {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
 }
-.textDescrip p {
-  font-size: 2rem;
+
+.close {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.close:hover {
+  background-color: #c0392b;
+}
+
+#modalTitle {
+  color: #333;
+  font-size: 34px;
+  margin-top: 0;
+}
+
+#modalDescription {
+  color: #555;
+  font-size: 18px;
+  text-align: justify;
+}
+
+#modalFecha {
+  color: #777;
+  font-size: 18px;
+  margin-top: 5px;
 }

@@ -9,11 +9,19 @@
 
 body {
   height: 100%;
-  background: rgb(36, 0, 0);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(36, 0, 0, 1);
+}
+.logo .logoMarvel {
+  width: 160px;
+}
 .Marvel_Logo {
   background: linear-gradient(
     180deg,
@@ -22,8 +30,35 @@ body {
     rgba(255, 0, 0, 1) 100%
   );
 }
-
+.logo .logoDC {
+  width: 160px;
+}
 .heroes_dc {
+  background: linear-gradient(180deg, rgb(4, 4, 118) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+main {
+  padding-top: 1rem;
+}
+
+.logo {
+  display: flex;
+  width: 160px;
+  overflow-x: hidden;
+  margin: auto;
+  transition: all 1s ease-in-out 0.1s;
+  gap: 2rem;
+}
+.logo:hover {
+  width: 600px;
+}
+
+.logoReverse {
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+}
+
+.inactive {
   display: none;
 }
 
@@ -35,7 +70,7 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-rows: auto;
   gap: 1rem;
   margin: 0 2rem;
@@ -43,7 +78,6 @@ body {
 
 .card img {
   min-width: 100%;
-
   height: 20.5rem;
 }
 
@@ -59,6 +93,10 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0.2rem 0.2rem 1rem 0.2rem black;
+  transition: 200ms;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 
 .info {

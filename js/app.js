@@ -53,7 +53,7 @@ function crearCartas(array, universo) {
 
 
 async function getData() {
-  const response = await fetch('/storage/empresas/datos.json');
+  const response = await fetch('./storage/empresas/datos.json');
   const universos = await response.json();
   return universos;
 }
@@ -64,6 +64,9 @@ async function getData() {
     for (const keyUniverso in dataHeroes) {
       let tempContent = document.createElement('main')
       tempContent.classList.add(`${keyUniverso}`)
+      if (keyUniverso == 'heroes_dc') {
+        tempContent.classList.add('inactive')
+      }
       // let logo = document.createElement('div')
       // logo.classList.add("logo")
       // let img = document.createElement('img')
@@ -74,6 +77,7 @@ async function getData() {
       tempContent.appendChild(cajaCartas)
       bodyM.appendChild(tempContent)
     }
+    addEventsUniverse()
   } catch (error) {
     console.error('Error en la obtención de datos:', error);
   }
@@ -85,6 +89,10 @@ async function getData() {
 
     document.querySelector('.close').addEventListener('click', function () {
       document.getElementById('myModal').style.display = 'none';
+      let elemento = document.querySelector('.close')
+      // Quitar todas las clases del elemento con clase 'close'
+      elemento.classList.remove(...elemento.classList);
+      elemento.classList.add('close')
     });
 
     window.addEventListener('click', function (event) {
@@ -96,5 +104,46 @@ async function getData() {
     console.error('Error en la obtención de datos:', error);
   }
 })();
+
+
+document.getElementById('inputBusqueda').addEventListener('input', buscar)
+
+function buscar() {
+  var input = document.getElementById('inputBusqueda');
+  var filter = input.value.toUpperCase();
+
+  for (let i = 0; i < arrayHeroes.length; i++) {
+
+    if (arrayHeroes[i].nombre.toUpperCase().includes(filter)) {
+      arrayHeroes[i].cardHtml.style.display = 'flex'
+    } else {
+      arrayHeroes[i].cardHtml.style.display = 'none'
+    }
+  }
+}
+
+
+
+function addEventsUniverse() {
+  let divLogo = document.querySelector('.logo')
+  let containerDC = document.querySelector('.heroes_dc')
+  let containerMarvel = document.querySelector('.Marvel_Logo')
+  let headM = document.querySelector('header')
+  document.querySelector('.logoDC').addEventListener('click', () => {
+    divLogo.classList.toggle('logoReverse');
+    containerMarvel.classList.toggle('inactive');
+    containerDC.classList.toggle('inactive');
+    headM.classList.toggle('heroes_dc')
+
+  });
+  document.querySelector('.logoMarvel').addEventListener("click", () => {
+    divLogo.classList.toggle('logoReverse');
+    containerMarvel.classList.toggle('inactive');
+    containerDC.classList.toggle('inactive');
+    headM.classList.toggle('heroes_dc')
+  });
+
+}
+
 
 

@@ -12,20 +12,26 @@
     <link rel="stylesheet" href="css/styles.css" />
     <script type="module" src="js/app.js" defer></script>
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="/css/inputSearch.css" />
     <title>Heroes</title>
   </head>
   <body>
-    <div class="logo">
-      <img src="source/Marvel_Logo.svg" alt="" />
-    </div>
+    <header>
+      <input type="search" id="inputBusqueda" placeholder="Buscar" />
+      <div class="logo">
+        <img class="logoMarvel" src="source/Marvel_Logo.svg" alt="" />
+        <img class="logoDC" src="source/DC_Comics_logo.svg" alt="" />
+      </div>
+    </header>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <img src="" alt="" class="imgModal" />
         <div class="textDescrip">
-          <button class="close">Regresar</button>
           <h2 id="modalTitle"></h2>
           <p id="modalDescription"></p>
           <p id="modalFecha"></p>
+          <button class="close">Regresar</button>
         </div>
       </div>
     </div>
