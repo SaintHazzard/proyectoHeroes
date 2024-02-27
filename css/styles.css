@@ -31,7 +31,8 @@ body {
 }
 
 .card img {
-  width: 100%;
+  width: 240px;
+  height: 370px;
 }
 
 .card {

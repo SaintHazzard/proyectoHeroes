@@ -15,10 +15,40 @@ class ObjectHeroe {
     this.cardHtml.querySelector(".botonVer").addEventListener('click', this.mostrarInfo);
   }
   mostrarInfo() {
-    console.log(`Hola soy ${this.nombre}`);
+    document.getElementById('modalTitle').textContent = this.nombre;
+    document.getElementById('modalDescription').textContent = this.descripcion;
+    document.getElementById('modalFecha').textContent = this.fecha
+    document.getElementById('myModal').style.display = 'flex';
+    document.querySelector(".imgModal").src = this.foto
+    document.querySelector('.close').classList.add('.marvel-button')
   }
 }
 
+
+function crearCartas(array) {
+  let cajaCartas = document.createElement("div")
+  cajaCartas.classList.add("cards")
+  for (const heroe of array) {
+    let baseCard = `
+        <div class="card">
+          <div class="imagen">
+            <img src="${heroe.foto}" alt="heroe" />
+          </div>
+          <div class="info">
+            <h2>${heroe.nombre}</h2>
+            <button class="botonVer">Ver</button>
+          </div>
+        </div>`
+    let tempDiv = document.createElement('div')
+    tempDiv.innerHTML = baseCard;
+
+    let nodo = tempDiv.firstElementChild
+    cajaCartas.appendChild(nodo)
+    arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha_lanzamiento, heroe.foto, nodo))
+
+  }
+  return cajaCartas
+}
 
 
 
@@ -40,29 +70,7 @@ async function getData() {
       img.src = `source/${keyUniverso}.svg`
       logo.appendChild(img)
       tempContent.appendChild(logo)
-      let cajaCartas = document.createElement("div")
-      cajaCartas.classList.add("cards")
-      for (const heroe of dataHeroes[keyUniverso]) {
-        // arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha, heroe.foto))
-        let baseCard = `
-        <div class="card">
-          <div class="imagen">
-            <img src="${heroe.foto}" alt="heroe" />
-          </div>
-          <div class="info">
-            <h2>${heroe.nombre}</h2>
-            <button class="botonVer">Ver</button>
-          </div>
-        </div>`
-        let tempDiv = document.createElement('div')
-        // console.log(tempDiv);
-
-        tempDiv.innerHTML = baseCard;
-
-        let nodo = tempDiv.firstElementChild
-        cajaCartas.appendChild(nodo)
-        arrayHeroes.push(new ObjectHeroe(heroe.nombre, heroe.descripcion, heroe.fecha_lanzamiento, heroe.foto, nodo))
-      }
+      let cajaCartas = crearCartas(dataHeroes[keyUniverso])
       tempContent.appendChild(cajaCartas)
       bodyM.appendChild(tempContent)
     }
@@ -72,6 +80,21 @@ async function getData() {
 })();
 
 
+(async () => {
+  try {
 
+    document.querySelector('.close').addEventListener('click', function () {
+      document.getElementById('myModal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === document.getElementById('myModal')) {
+        document.getElementById('myModal').style.display = 'none';
+      }
+    });
+  } catch (error) {
+    console.error('Error en la obtención de datos:', error);
+  }
+})();
 
 

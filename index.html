@@ -9,9 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script type="module" src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/modal.css" />
     <title>Heroes</title>
   </head>
-  <body></body>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <img src="" alt="" class="imgModal" />
+        <div class="textDescrip">
+          <button class="close marvel-button">Regresar</button>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDescription"></p>
+          <p id="modalFecha"></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
