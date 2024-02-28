@@ -15,12 +15,12 @@
 .modal-content {
   display: flex;
   position: relative;
-  align-self: center;
   margin: auto;
   padding: 20px;
-  width: 40%;
+  width: 60%;
   height: 60%;
   gap: 1rem;
+  align-items: center;
 }
 
 .modal-content img {
@@ -55,9 +55,6 @@ button.Marvel_Logo {
 
 button.heroes_dc {
   background-color: #4721d2;
-}
-.Marvel_Logo:hover {
-  background-color: #c5111b;
 }
 
 .textDescrip {

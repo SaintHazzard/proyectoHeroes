@@ -67,12 +67,6 @@ async function getData() {
       if (keyUniverso == 'heroes_dc') {
         tempContent.classList.add('inactive')
       }
-      // let logo = document.createElement('div')
-      // logo.classList.add("logo")
-      // let img = document.createElement('img')
-      // img.src = `source/${keyUniverso}.svg`
-      // logo.appendChild(img)
-      // tempContent.appendChild(logo)
       let cajaCartas = crearCartas(dataHeroes[keyUniverso], keyUniverso)
       tempContent.appendChild(cajaCartas)
       bodyM.appendChild(tempContent)
@@ -81,12 +75,13 @@ async function getData() {
   } catch (error) {
     console.error('Error en la obtención de datos:', error);
   }
+  console.log('1');
+
 })();
 
 
 (async () => {
   try {
-
     document.querySelector('.close').addEventListener('click', function () {
       document.getElementById('myModal').style.display = 'none';
       let elemento = document.querySelector('.close')
@@ -103,6 +98,7 @@ async function getData() {
   } catch (error) {
     console.error('Error en la obtención de datos:', error);
   }
+  console.log('2');
 })();
 
 
@@ -128,19 +124,30 @@ function addEventsUniverse() {
   let divLogo = document.querySelector('.logo')
   let containerDC = document.querySelector('.heroes_dc')
   let containerMarvel = document.querySelector('.Marvel_Logo')
-  let headM = document.querySelector('header')
+  // let headM = document.querySelector('header')
+  let bodyM = document.querySelector('html')
   document.querySelector('.logoDC').addEventListener('click', () => {
-    divLogo.classList.toggle('logoReverse');
-    containerMarvel.classList.toggle('inactive');
-    containerDC.classList.toggle('inactive');
-    headM.classList.toggle('heroes_dc')
-
+    if (containerDC.classList.contains('inactive')) {
+      divLogo.classList.toggle('logoReverse');
+      containerMarvel.classList.toggle('inactive');
+      containerDC.classList.toggle('inactive');
+      // headM.classList.toggle('heroes_dc')
+      bodyM.classList.add("DC")
+      bodyM.classList.remove("Marvel")
+    }
   });
   document.querySelector('.logoMarvel').addEventListener("click", () => {
-    divLogo.classList.toggle('logoReverse');
-    containerMarvel.classList.toggle('inactive');
-    containerDC.classList.toggle('inactive');
-    headM.classList.toggle('heroes_dc')
+
+    if (containerMarvel.classList.contains('inactive')) {
+      divLogo.classList.toggle('logoReverse');
+      containerMarvel.classList.toggle('inactive');
+      containerDC.classList.toggle('inactive');
+      bodyM.classList.add("Marvel")
+      bodyM.classList.remove("DC")
+    }
+    // headM.classList.toggle('heroes_dc')
+
+
   });
 
 }

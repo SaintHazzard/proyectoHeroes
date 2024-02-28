@@ -5,6 +5,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+html {
+  height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -17,12 +23,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(36, 0, 0, 1);
+  /* background-color: rgba(36, 0, 0, 1); */
 }
 .logo .logoMarvel {
   width: 160px;
 }
-.Marvel_Logo {
+.Marvel {
+  height: auto;
   background: linear-gradient(
     180deg,
     rgba(36, 0, 0, 1) 0%,
@@ -30,11 +37,14 @@ header {
     rgba(255, 0, 0, 1) 100%
   );
 }
+
+.DC {
+  background: linear-gradient(180deg, rgb(4, 4, 118) 0%, rgba(0, 0, 0, 1) 100%);
+  height: auto;
+}
+
 .logo .logoDC {
   width: 160px;
-}
-.heroes_dc {
-  background: linear-gradient(180deg, rgb(4, 4, 118) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 main {
