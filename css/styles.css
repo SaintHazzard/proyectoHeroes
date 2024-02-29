@@ -29,13 +29,16 @@ header {
   width: 160px;
 }
 .Marvel {
-  height: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   background: linear-gradient(
-    180deg,
-    rgba(36, 0, 0, 1) 0%,
-    rgba(115, 36, 36, 1) 48%,
-    rgba(255, 0, 0, 1) 100%
+    to bottom,
+    rgba(36, 0, 0, 1),
+    rgba(115, 36, 36, 1),
+    rgba(255, 0, 0, 1)
   );
+  background-attachment: fixed;
 }
 
 .DC {
@@ -83,7 +86,8 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-rows: auto;
   gap: 1rem;
-  margin: 0 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .card img {
@@ -104,6 +108,7 @@ main {
   flex-direction: column;
   box-shadow: 0.2rem 0.2rem 1rem 0.2rem black;
   transition: 200ms;
+  margin: auto;
 }
 .card:hover {
   transform: scale(1.1);
@@ -128,4 +133,16 @@ main {
 }
 .card button:hover {
   transform: scale(1.1);
+}
+
+/* Mobile version */
+@media (max-width: 500px) {
+  .logo {
+    margin-top: 4rem;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    width: 90%;
+  }
 }

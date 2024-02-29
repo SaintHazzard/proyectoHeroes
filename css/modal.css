@@ -98,3 +98,21 @@ button.heroes_dc {
   font-size: 18px;
   margin-top: 5px;
 }
+
+/* Mobile version */
+@media (max-width: 500px) {
+  .logo {
+    margin-top: 4rem;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .modal-content img {
+    height: 400px;
+    object-fit: contain;
+  }
+}
